@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  filter: brightness(0.9);
+  filter: brightness(0.85);
 }
 
 .home .home-content {
@@ -26,7 +26,7 @@
 }
 
 .home-content .title-1 {
-  filter: brightness(5);
+  filter: brightness(2);
   text-transform: uppercase;
   color: white;
   font-size: 3rem;

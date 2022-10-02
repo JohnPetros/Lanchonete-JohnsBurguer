@@ -2,8 +2,7 @@
   John's Burguer
 </h1>
 
-![Mentalista - Google Chrome 12_08_2022 16_08_53](https://user-images.githubusercontent.com/93893533/184433131-1b38ad76-1587-4f7f-9610-7054e69c859a.png)
-
+![John's Burguer - Google Chrome 02_10_2022 12_01_55](https://user-images.githubusercontent.com/93893533/193461033-8b28a335-28c1-4fbd-aa89-e698b69ab373.png)
 
 <br />
 
@@ -11,7 +10,7 @@
 
 Projeto de um site de lanchonete Delivery simples responsivo feita em PHP.
 
- <h3 align="center"><a target="_blank" href="https://mentalist-php.herokuapp.com/">Veja o jogo funcionando 👀</a></h3>
+ <h3 align="center"><a target="_blank" href="https://Lanchonete-JohnsBurguer.johnpetros.repl.co">Veja o site funcionando 👀</a></h3>
 
 <hr>
 <br>
