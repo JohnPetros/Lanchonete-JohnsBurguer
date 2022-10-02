@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 12rem;
+    background: var(--primary);
+}
+
+footer .footer-item {
+    font-size: 1.8rem;
+    color: var(--text-header);
+}
+
+footer .footer-item.footer-logo {
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+}
+
+footer .footer-item.footer-logo img {
+    width: 100%;
+}
+
+footer .footer-item a {
+    color: var(--text-header);
+    
+}
+
+footer .footer-item .icon {
+    color: var(--text-header);
+    background-color: var(--tertiary);
+    border-radius: 25%;
+    border: 5px solid var(--tertiary);
+    font-size: 3.5rem;
+    cursor: pointer;
+}

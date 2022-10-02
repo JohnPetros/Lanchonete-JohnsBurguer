@@ -1,0 +1,80 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background-color: var(--primary);
+  height: var(--header-height);
+  width: 100%;
+  height: 12vh;
+  position: fixed;
+  z-index: 15;
+}
+
+header .logo {
+  width: 60px;
+  height: 60px;
+}
+
+header .logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+header .menu {
+  display: flex;
+}
+
+header .menu .menu-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  margin-right: 15px;
+}
+
+header .menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--text-header);
+  transition: background 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+header .menu a:hover,
+header .menu a.active {
+  background: var(--tertiary);
+}
+
+header .menu .btn-header {
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+  background-color: var(--tertiary);
+  color: var(--text-header);
+  margin-top: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+header .menu .btn-header:hover {
+  background: var(--text-header);
+  color: var(--primary);
+}
+
+header .menu .social-links {
+  margin-top: 45px;
+  display: flex;
+  gap: 55px;
+  display: none;
+  cursor: pointer;
+}
+
+header .menu .social-links .social-link {
+  font-size: 3rem;
+  color: var(--text-header);
+}

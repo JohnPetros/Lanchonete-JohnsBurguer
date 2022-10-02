@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins&family=Roboto&display=swap");
+
+:root {
+  --primary: #d54e25;
+  --secondary: #f6c40e;
+  --tertiary: #1d1d1d;
+  --text-header: #eee;
+  --bg-dark: rgb(237, 237, 237);
+  --bg-light: rgb(253, 253, 253);
+  --checkout-text1: #777;
+
+  --cursive: "Oleo Script Swash Caps", cursive;
+
+  --header-height: 12vh;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: overlay;
+}
+
+section {
+  margin-bottom: 7rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  background-color: var(--secondary);
+  width: 100%;
+  height: 3px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: var(--cursive);
+  color: var(--secondary);
+}
+
+.button-to-up {
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--text-header);
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.button-to-up.show {
+  bottom: 10%;
+
+}

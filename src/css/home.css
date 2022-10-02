@@ -1,0 +1,66 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/home-image.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  filter: brightness(0.9);
+}
+
+.home .home-content {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.home-content .title-2 {
+  filter: brightness(3);
+  color: var(--secondary);
+  font-size: 4rem;
+  font-weight: bolder;
+  font-family: var(--cursive);
+}
+
+.home-content .title-1 {
+  filter: brightness(5);
+  text-transform: uppercase;
+  color: white;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.home-content .home-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.home-content .home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  padding: 20px 35px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  filter: brightness(1.1);
+  text-transform: uppercase;
+  transition: background 0.2s ease-in;
+}
+
+.home-content .home-button:hover {
+  background: var(--tertiary);
+}
+
+.fa-whatsapp {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}

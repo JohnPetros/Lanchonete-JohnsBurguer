@@ -1,0 +1,28 @@
+@media (max-width: 880px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    .contact .form {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .form .form-title {
+        font-size: 2.5rem;
+    }
+    .form .form-input .field {
+        font-size: 1.4rem;
+    }
+    .map-adress {
+        width: 90%;
+    }
+    .map-adress .map-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .map-adress .address,
+    .map-adress .opening-hours {
+        font-size: 1.5rem;
+    }
+}

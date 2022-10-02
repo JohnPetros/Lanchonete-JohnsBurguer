@@ -1,0 +1,293 @@
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-dark);
+  width: 500px;
+  max-width: 90%;
+  min-height: 80vh;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 10px black;
+  z-index: 20;
+  overflow: scroll;
+  
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal.hidden,
+#fade.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hidden {
+  left: -10%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-shadow: 1px 1px 5px black;
+}
+
+.modal-header .button {
+  background-color: var(--text-header);
+  padding: 1rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  font-size: 2rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.modal-header .button:hover {
+  background: var(--tertiary);
+  color: var(--primary);
+}
+
+.modal-food,
+.modal-shop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 1.5rem;
+}
+.modal-tab-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .modal-body {
+} */
+
+.modal-body .food {
+  background-image: url("../assets/burguer-bacon.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  color: var(--text-header);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.modal-body .options {
+  display: none;
+}
+
+.modal-body .options.selected-options {
+  display: block;
+
+}
+
+.modal-body .option-food {
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+}
+
+.modal-body .option-food h3 {
+  margin: 15px 0;
+}
+
+.modal-body .option-food textarea {
+  resize: none;
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.modal-body .option-food .input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.modal-body .option-food .input-container.highlight-radio {
+  background-color: var(--tertiary);
+  color: var(--primary);
+}
+
+.modal-body .option-food .input-container .plus-price {
+  margin-left: auto;
+}
+
+.modal-body .option-food .input-container input {
+  display: none;
+}
+
+.modal-body .option-food .input-container input + p:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
+.modal-body .option-food .input-container input:checked + p:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: var(--primary);
+}
+
+.input-number-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-number {
+  width: 80%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid black;
+}
+
+.quantiny-controls {
+  width: 30%;
+  display: flex;
+}
+
+.quantiny-controls .control {
+  width: 50%;
+  height: 47px;
+  border: 1px solid black;
+  padding: 1.2rem 1rem 0;
+  background-color: var(--tertiary);
+  color: var(--text-header);
+}
+
+.quantiny-controls .control:hover {
+  background-color: var(--primary);
+}
+
+.modal-footer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-footer-button {
+  background-color: var(--primary);
+  color: var(--text-header);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  transition: background 0.2s ease-in-out;
+}
+
+/* .modal-footer-button span::after {
+  content: "";
+  border: 1px solid var(--text-header);
+  background: var(--text-header);
+  margin-inline: 15px;
+} */
+
+.modal-footer-button:hover {
+  background: var(--tertiary);
+  color: var(--primary);
+}
+
+.modal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modal-table thead {
+  background-color: var(--tertiary);
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.modal-table thead th {
+  padding: 0.5rem;
+}
+
+.modal-table tbody,
+.modal-table tfoot {
+  background-color: var(--text-header);
+}
+
+.modal-table tbody td {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.modal-table tbody td.order-info {
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.modal-table tbody td.order-info input {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: inherit;
+}
+
+.modal-table tbody td.order-info .options-order p {
+  padding-top: .5rem;
+}
+
+.modal-table tbody td .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: inherit;
+  max-width: 70px;
+}
+
+.modal-table tbody td .remove-order {
+  font-size: 1.6rem;
+}
+
+.modal-table tbody td .remove-order:hover {
+  color: var(--primary);
+}
+
+.modal-table tbody td#empty-orders-message {
+  font-size: 2rem;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.modal-table tfoot td {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-top: 1px solid var(--tertiary);
+}

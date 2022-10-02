@@ -1,0 +1,40 @@
+.about {
+    display: flex;
+    justify-content: space-around;
+    padding: 3.5rem 12rem;
+    padding-top: calc(4.1rem + var(--header-height));
+}
+
+.about-text {
+    width: 35%;
+}
+
+.about-text .paragraph {
+    font-size: 1.4rem;
+    text-align: justify;
+    margin-bottom: 10px;
+    text-indent: 40px;
+}
+
+.about-images {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    position: relative;
+    overflow: visible;
+}
+
+.about-images .about-image {
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.about-images .about-image img {
+    width: 100%;
+}
+
+.about-images .about-image:hover {
+    transform: translateY(-15px);
+}

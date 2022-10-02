@@ -1,0 +1,138 @@
+<div id="fade" class="hidden"></div>
+<form id="modal" class="hidden" method="post" action="src/pages/checkout.php">
+    <div class="modal-header">
+        <i id="food-tab" class="button tab-button fa-solid fa-utensils"></i>
+        <i id="shop-tab" class="button tab-button button fa-solid fa-cart-shopping"></i>
+        <i id="close-modal-button" class="button fa-solid fa-x"></i>
+    </div>
+    <div class="modal-body modal-food modal-tab-open">
+        <div class="food" id="food-image">
+            <h2 id="food-name">Burguer Bacon</h2> 
+        </div>
+        <div id="burguer-options" class="options selected-options">
+            <div class="option-food">
+                <h3>Opções</h3>
+                <label class="input-container highlight-radio" for="medium-size">
+                    <input type="radio" checked name="food-size" id="medium-size" class="default" value="0" data-description="">
+                    <p>Médio</p>
+                </label>
+                <label class="input-container"for="big-size">
+                    <input type="radio" name="food-size" id="big-size" value="7" data-description="Opções: Grande(+R$5,00)">
+                    <p>Grande</p>
+                    <p class="plus-price">+R$7,00</p>
+                </label>
+                <label class="input-container" for="monster-size">
+                    <input type="radio" name="food-size" id="monster-size" value="10" data-description="Opções: Monstro(+R$7,00)">
+                    <p>Monstro</p>
+                    <p class="plus-price">+R$10,00</p>
+                </label>
+            </div>
+            <div class="option-food">
+                <h3>Molho</h3>
+                <label class="input-container highlight-radio" for="sauce-none">
+                    <input type="radio" checked name="sauce" id="sauce-none" class="default" value="0" data-description="">
+                    <p>Sem molho</p>
+                </label>
+                <label class="input-container" for="sauce-bbc">
+                    <input type="radio" name="sauce" id="sauce-bbc" value="2.99" data-description="Molho: Molho Barbacue(+R$2,99)">
+                    <p>Molho Barbacue</p>
+                    <p class="plus-price">+R$2,99</p>
+                </label>
+                <label class="input-container"for="sauce-garlic">
+                    <input type="radio" name="sauce" id="sauce-garlic" value="2.99" data-description="Molho: Molho de Alho(+R$2,99)">
+                    <p>Molho de Alho</p>
+                    <p class="plus-price">+R$2,99</p>
+                </label>
+                <label class="input-container" for="sauce-especial">
+                    <input type="radio" name="sauce" id="sauce-especial" value="3.99" data-description="Molho: Molho Especial da Casa(+R$3,99)">
+                    <p>Molho Especial da Casa</p>
+                    <p class="plus-price">+R$3,99</p>
+                </label>
+            </div>
+            <div class="option-food">
+                <h3>Batata Frita</h3>
+                <label class="input-container highlight-radio" for="none-portion">
+                    <input type="radio" checked name="fries-portion" id="none-portion" class="default" value="0" data-description="">
+                    <p>Sem Batata Frita</p>
+                </label>
+                <label class="input-container" for="medium-portion">
+                    <input type="radio" name="fries-portion" id="medium-portion" value="2.99" data-description="Batata Frita: Porção média(+R$2,99)">
+                    <p>Porção Média</p>
+                    <p class="plus-price">+R$2,99</p>
+                </label>
+                <label class="input-container"for="big-portion">
+                    <input type="radio" name="fries-portion" id="big-portion" value="4.99" data-description="Batata Frita: Porção média(+R$4,99)">
+                    <p>Porção Grande</p>
+                    <p class="plus-price">+R$4,99</p>
+                </label>
+            </div>
+        </div>
+
+        <div id="desert-options" class="options">
+           
+        </div>
+
+        <div id="drink-options" class="options">
+            <div class="option-food">
+                <h3>Tamanho</h3>
+                <label class="input-container" for="310ml">
+                    <input type="radio" name="drink-size" id="310ml" value="0">
+                    <p>310ml</p>
+                </label>
+                <label class="input-container" for="500ml">
+                    <input type="radio" name="drink-size" id="500ml" value="2.00" data-description="Tamanho: 310ml (+R$2,00)">
+                    <p>500ml</p>
+                    <p class="plus-price">+R$2,00</p>
+                </label>
+                <label class="input-container"for="750ml">
+                    <input type="radio" name="drink-size" id="750ml" value="3.00" data-description="Tamanho: 310ml (+R$3,00)">
+                    <p>750ml</p>
+                    <p class="plus-price">+R$3,00</p>
+                </label>
+            </div>
+        </div>
+
+        <div class="option-food">
+            <h3>Quantidade</h3>
+            <div class="input-number-container">
+                <input type="text" name="quantinty" class="input-number" readonly value="1">
+                <div class="quantiny-controls">
+                    <i class="control fa-solid fa-plus" id="control-plus"></i>
+                    <i class="control fa-solid fa-minus" id="control-minus"></i>
+                </div>
+            </div>
+        </div>
+        <button class="modal-footer-button" type="button" >
+            <span id="food-price">R$28,95</span>
+            | Adicionar Pedido
+        </button>
+    </div>
+
+    <!-- ------------------------------------- -->
+
+    <div class="modal-body modal-shop">
+      
+        <table class="modal-table">
+            <thead>
+                <th>Qtd</th>
+                <th>Item</th>
+                <th colspan="2">Preço</th>
+            </thead>
+            <tbody id="orders"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" id="total-shop-label">Total</td>
+                    <td colspan="2"id="total-shop-price" class="total"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button class="modal-footer-button" id="finish-button" type="submit">
+            <span class="total"></span>
+            | Finalizar Pedido
+        </button>
+    </div>
+    
+    <input type="text" hidden name="total" value="">
+    <input type="text" hidden name="orders-quantinty" id="orders-quantinty" value="">
+</form>

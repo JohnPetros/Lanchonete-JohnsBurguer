@@ -1,0 +1,6 @@
+@media (max-width: 880px) {
+  .modal-food,
+  .modal-shop {
+    font-size: .5rem;
+  }
+}

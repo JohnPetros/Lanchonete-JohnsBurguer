@@ -1,0 +1,13 @@
+@media (max-width: 880px) {
+  .home .home-content {
+    left: 1%;
+  }
+  .home-content .home-buttons {
+    flex-direction: column;
+  }
+  .home-content .home-button {
+    padding: 18px 12px;
+    font-size: 1.4rem;
+    width: 250px;
+  }
+}
