@@ -8,7 +8,7 @@
 
 ## 💻 Projeto
 
-Projeto de um site de lanchonete Delivery simples responsivo feita em PHP.
+Projeto de um site de lanchonete Delivery simples responsivo desenvolvido em PHP.
 
  <h3 align="center"><a target="_blank" href="https://Lanchonete-JohnsBurguer.johnpetros.repl.co">Veja o site funcionando 👀</a></h3>
 
